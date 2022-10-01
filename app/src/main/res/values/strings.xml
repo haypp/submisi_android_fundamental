@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="nameUser">Nama</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Follower</string>
+    <string name="locationC">Location</string>
+    <string name="avatariki">avatariki</string>
+    <string name="search_hint">Masukkan Username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagehero">imageHero</string>
+    <string name="textview">TextView</string>
+    <string name="list_user">List User</string>
+    <string name="att">\@</string>
+    <string name="company">"Company : "</string>
+    <string name="follwoing">"Following : "</string>
+    <string name="follower">"Follower : "</string>
+    <string name="repos">"Repo : "</string>
+</resources>
