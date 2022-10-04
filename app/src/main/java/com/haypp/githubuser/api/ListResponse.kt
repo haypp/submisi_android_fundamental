@@ -1,24 +1,19 @@
 package com.haypp.githubuser.api
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-
-@Parcelize
 data class ListDataProfile(
 	@field:SerializedName("items")
 	val items: ArrayList<Items>
-) : Parcelable
+)
 
-@Parcelize
 data class Items(
 	@field:SerializedName("avatar_url")
 	val avatarUrl: String,
 
 	@SerializedName("login")
 	val login: String,
-) : Parcelable
+)
 
 data class DetilUserData(
 	@field:SerializedName("followers")
