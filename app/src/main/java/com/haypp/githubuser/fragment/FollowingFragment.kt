@@ -69,14 +69,10 @@ class FollowingFragment : Fragment() {
     }
     private fun showLoading(state: Boolean) {
         val progressBar = view?.findViewById<ProgressBar>(R.id.progressBar1)
-        if (state) {
-            progressBar?.visibility = View.VISIBLE
-        } else {
-            progressBar?.visibility = View.GONE
-        }
+        progressBar?.visibility = if (state) View.VISIBLE else View.GONE
     }
 
     companion object{
         const val extra = "extra"
-        }
+    }
 }

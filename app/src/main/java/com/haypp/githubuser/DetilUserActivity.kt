@@ -27,14 +27,12 @@ class DetilUserActivity : AppCompatActivity() {
         setContentView(bindingg.root)
 
         val usernamee = intent.getStringExtra(extradataa).toString()
-        showLoading(false)
         val client = ApiConfig.getApiService().getDataUser(usernamee)
         client.enqueue(object : Callback<DetilUserData> {
             override fun onResponse(
                 call: Call<DetilUserData>,
                 response: Response<DetilUserData>
             ) {
-//                showLoading(false)
                 if (response.isSuccessful) {
                     val responseBody = response.body()
                     if (responseBody != null) {
@@ -57,7 +55,6 @@ class DetilUserActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<DetilUserData>, t: Throwable) {
-//                showLoading(false)
                 Log.e(TAG, "onFailure: ${t.message}")
             }
         })
@@ -71,15 +68,6 @@ class DetilUserActivity : AppCompatActivity() {
             tab.text = resources.getString(TAB_TITLES[position])
         }.attach()
         supportActionBar?.elevation = 0f
-    }
-
-
-    private fun showLoading(state: Boolean) {
-        if (state) {
-            bindingg.progressBar.visibility = View.VISIBLE
-        } else {
-            bindingg.progressBar.visibility = View.GONE
-        }
     }
 
     companion object {
