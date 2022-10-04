@@ -3,10 +3,12 @@ package com.haypp.githubuser
 import android.app.SearchManager
 import android.content.ContentValues.TAG
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
@@ -40,15 +42,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.option_menu, menu)
-
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
         val searchView = menu.findItem(R.id.search).actionView as SearchView
-
         searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
         searchView.queryHint = resources.getString(R.string.search_hint)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                //Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
                 searchView.clearFocus()
                 findUser(query)
                 return true
@@ -58,6 +57,21 @@ class MainActivity : AppCompatActivity() {
             }
         })
         return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menuFavorite -> {
+                val i = Intent(this, FavoriteActivity::class.java)
+                startActivity(i)
+                return true
+            }
+            R.id.menuSettings -> {
+                val i = Intent(this, SettingsActivity::class.java)
+                startActivity(i)
+                return true
+            }
+            else -> return true
+        }
     }
 
     private fun findUser(username: String) {
@@ -87,11 +101,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun showLoading(isLoading: Boolean) {
         val progressBar = findViewById<ProgressBar>(R.id.barprogess)
-        if (isLoading) {
-            progressBar?.visibility = View.VISIBLE
-        } else {
-            progressBar?.visibility = View.GONE
-        }
+        progressBar?.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }
 
