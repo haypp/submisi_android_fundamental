@@ -3,7 +3,6 @@ package com.haypp.githubuser
 import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -37,13 +36,13 @@ class DetilUserActivity : AppCompatActivity() {
                     val responseBody = response.body()
                     if (responseBody != null) {
                         bindingg.apply {
-                            tvNama.setText(responseBody.name)
-                            tvCompany.setText(StringBuilder(getString(R.string.company)).append(responseBody.company.toString()))
-                            tvUsername.setText(StringBuilder(getString(R.string.att)).append(responseBody.login))
-                            tvFollowing.setText(StringBuilder(getString(R.string.follwoing)).append(responseBody.following.toString()))
-                            tvFollower.setText(StringBuilder(getString(R.string.follower)).append(responseBody.followers.toString()))
-                            tvRepo.setText(StringBuilder(getString(R.string.repos)).append(responseBody.publicRepos.toString()))
-                            tvLocation.setText(responseBody.location)
+                            tvNama.text = responseBody.name
+                            tvCompany.text = StringBuilder(getString(R.string.company)).append(responseBody.company.toString())
+                            tvUsername.text = StringBuilder(getString(R.string.att)).append(responseBody.login)
+                            tvFollowing.text = StringBuilder(getString(R.string.follwoing)).append(responseBody.following.toString())
+                            tvFollower.text = StringBuilder(getString(R.string.follower)).append(responseBody.followers.toString())
+                            tvRepo.text = StringBuilder(getString(R.string.repos)).append(responseBody.publicRepos.toString())
+                            tvLocation.text = responseBody.location
                             Glide.with(this@DetilUserActivity)
                                 .load(responseBody.avatarUrl)
                                 .into(bindingg.ImgAvatar)
