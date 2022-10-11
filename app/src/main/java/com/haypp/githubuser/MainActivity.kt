@@ -13,6 +13,7 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.haypp.githubuser.FavoriteActivity.FavoriteActivity
 import com.haypp.githubuser.adaptor.ListUserAdaptor
 import com.haypp.githubuser.api.*
 import com.haypp.githubuser.databinding.ActivityMainBinding
