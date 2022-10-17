@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.haypp.githubuser.R
 import com.haypp.githubuser.adaptor.ListUserAdaptor
-import com.haypp.githubuser.api.ApiConfig
-import com.haypp.githubuser.api.Items
-import com.haypp.githubuser.api.FollowData
+import com.haypp.githubuser.data.api.ApiConfig
+import com.haypp.githubuser.data.api.Items
+import com.haypp.githubuser.data.api.FollowData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

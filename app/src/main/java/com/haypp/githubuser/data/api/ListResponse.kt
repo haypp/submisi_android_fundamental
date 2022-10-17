@@ -1,4 +1,4 @@
-package com.haypp.githubuser.api
+package com.haypp.githubuser.data.api
 
 import com.google.gson.annotations.SerializedName
 
@@ -9,10 +9,10 @@ data class ListDataProfile(
 
 data class Items(
 	@field:SerializedName("avatar_url")
-	val avatarUrl: String,
+	val avatarUrl: String?,
 
 	@SerializedName("login")
-	val login: String,
+	val login: String?,
 )
 
 data class DetilUserData(

@@ -26,10 +26,10 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".DetilUserActivity"
+            android:name=".activity.DetilUserActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
             android:name=".Splash"

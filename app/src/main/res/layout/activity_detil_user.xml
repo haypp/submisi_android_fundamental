@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetilUserActivity">
+    tools:context=".activity.DetilUserActivity">
 
     <ImageView
         android:id="@+id/ImgAvatar"
@@ -112,5 +112,18 @@
         app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toEndOf="@+id/tvLocation"
         app:layout_constraintTop_toTopOf="@+id/tvLocation" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonFavorite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_bookmark_null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

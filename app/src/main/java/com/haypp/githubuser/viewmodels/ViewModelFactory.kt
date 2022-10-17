@@ -1,9 +1,8 @@
-package com.haypp.githubuser.helper
+package com.haypp.githubuser.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.haypp.githubuser.FavoriteActivity.FavoriteViewModel
 
 class ViewModelFactory private constructor(private val mApplication: Application) : ViewModelProvider.NewInstanceFactory() {
 

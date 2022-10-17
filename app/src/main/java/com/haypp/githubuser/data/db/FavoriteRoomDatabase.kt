@@ -1,4 +1,4 @@
-package com.haypp.githubuser.db
+package com.haypp.githubuser.data.db
 
 import android.content.Context
 import androidx.room.Database
