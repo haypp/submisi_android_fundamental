@@ -16,4 +16,5 @@
     <string name="follwoing">"Following : "</string>
     <string name="follower">"Follower : "</string>
     <string name="repos">"Repo : "</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>

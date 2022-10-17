@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Sub1_ListUser"
         tools:targetApi="31">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".FavoriteActivity.FavoriteActivity"
             android:exported="false">
 <!--            <meta-data-->
 <!--                android:name="android.app.lib_name"-->
@@ -26,10 +26,10 @@
             android:exported="false">
         </activity>
         <activity
-            android:name=".DetilUserActivity"
+            android:name=".activity.DetilUserActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
             android:name=".Splash"

@@ -8,9 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.haypp.githubuser.DetilUserActivity
+import com.haypp.githubuser.activity.DetilUserActivity
 import com.haypp.githubuser.R
-import com.haypp.githubuser.api.Items
+import com.haypp.githubuser.data.api.Items
 
 class ListUserAdaptor(private val listUser: ArrayList<Items>) : RecyclerView.Adapter<ListUserAdaptor.ListViewHolder>() {
 

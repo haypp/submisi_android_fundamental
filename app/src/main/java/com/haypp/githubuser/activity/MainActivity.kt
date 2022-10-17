@@ -1,4 +1,4 @@
-package com.haypp.githubuser
+package com.haypp.githubuser.activity
 
 import android.app.SearchManager
 import android.content.ContentValues.TAG
@@ -13,8 +13,13 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.haypp.githubuser.FavoriteActivity.FavoriteActivity
+import com.haypp.githubuser.R
+import com.haypp.githubuser.SettingsActivity
 import com.haypp.githubuser.adaptor.ListUserAdaptor
-import com.haypp.githubuser.api.*
+import com.haypp.githubuser.data.api.ApiConfig
+import com.haypp.githubuser.data.api.Items
+import com.haypp.githubuser.data.api.ListDataProfile
 import com.haypp.githubuser.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
