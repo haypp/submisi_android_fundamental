@@ -3,7 +3,7 @@ package com.haypp.githubuser.data.api
 import android.media.session.MediaSession.Token
 import retrofit2.Call
 import retrofit2.http.*
-    private const val Token = "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"
+private const val Token = "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"
 interface ApiService {
     @GET("users/{login}")
     @Headers("Authorization: token $Token")
